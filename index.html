@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Habit Tracker</h1>
+            <p>Build better habits, one day at a time</p>
+        </header>
+
+        <div class="main-content">
+            <section class="habit-form-section">
+                <h2>Add New Habit</h2>
+                <form id="habitForm" class="habit-form">
+                    <div class="form-group">
+                        <label for="habitName">Habit Name</label>
+                        <input type="text" id="habitName" required placeholder="e.g., Drink 8 glasses of water">
+                    </div>
+                    <div class="form-group">
+                        <label for="habitCategory">Category</label>
+                        <select id="habitCategory" required>
+                            <option value="">Select category</option>
+                            <option value="health">Health</option>
+                            <option value="fitness">Fitness</option>
+                            <option value="productivity">Productivity</option>
+                            <option value="learning">Learning</option>
+                            <option value="social">Social</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="habitFrequency">Target Frequency</label>
+                        <select id="habitFrequency" required>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Habit</button>
+                </form>
+            </section>
+
+            <section class="dashboard-section">
+                <h2>Your Progress</h2>
+                <div id="habitsList" class="habits-list"></div>
+                <div id="emptyState" class="empty-state">
+                    <p>No habits yet. Add your first habit to get started!</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
